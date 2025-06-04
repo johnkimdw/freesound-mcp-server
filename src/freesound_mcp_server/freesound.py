@@ -2,6 +2,7 @@ import asyncio
 import os
 import sys
 from typing import Optional
+import json
 
 import httpx
 from dotenv import load_dotenv
@@ -16,7 +17,7 @@ mcp = FastMCP("freesound")
 @mcp.tool()
 async def search_sounds(query: str, max_results: int = 10) -> dict:
     """
-    Search Freesound for audio files suitable for video editing.
+    Search Freesound for audio files.
     
     Args:
         query: Search terms (e.g., "thunderstorm", "piano music", "bird sounds")
