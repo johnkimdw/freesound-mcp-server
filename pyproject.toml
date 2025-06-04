@@ -1,8 +1,12 @@
 [project]
 name = "freesound-mcp-server"
 version = "0.1.0"
-description = "MCP server for Freesound audio serach. Designed for video editors."
+description = "MCP server for Freesound audio search. Designed for video editors."
 readme = "README.md"
+license = {text = "MIT"}
+keywords = ["mcp", "freesound", "audio", "search", "video-editing", "sound-effects"]
+
+
 requires-python = ">=3.10"
 dependencies = [
     "fastmcp>=0.2.0",
