@@ -1,7 +1,28 @@
 [project]
 name = "freesound-mcp-server"
 version = "0.1.0"
-description = "Add your description here"
+description = "MCP server for Freesound audio serach. Designed for video editors."
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = []
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=0.2.0",
+    "httpx>=0.27.0", 
+    "python-dotenv>=1.0.0",
+]
+
+authors = [
+    {name = "John Kim", email = "john.kim.dongwhi@gmail.com"}
+]
+
+[project.scripts]
+freesound-mcp = "freesound_mcp_server.freesound:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
