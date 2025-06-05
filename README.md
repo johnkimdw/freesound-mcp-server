@@ -25,11 +25,20 @@ You will need to obtain a Freesound API key:
 
 The easiest way to run the Freesound MCP Server is using Docker. No local Python installation required.
 
-Afterwards, build your docker image.
+
+#### Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/johnkimdw/freesound-mcp-server.git
+cd freesound-mcp-server
 ```
-cd /path/to/freesound-mcp-server
+
+2. Build docker image:
+```bash
 docker build -t freesound-mcp .  
 ```
+
 
 #### Claude Desktop
 
