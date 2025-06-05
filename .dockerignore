@@ -1,0 +1,8 @@
+.venv
+*.pyc
+__pycache__
+.git
+.gitignore
+.pytest_cache
+.coverage
+.env
