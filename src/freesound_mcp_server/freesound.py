@@ -96,51 +96,5 @@ def format_response(query: str, max_results: int, data: dict) -> dict:
 
     return formatted_results
 
-
-
-# async def run_server():
-#     """Run the MCP server using stdio transport"""
-#     try:
-#         # Start the MCP server
-#         await mcp.run()
-#     except KeyboardInterrupt:
-#         print("Server stopped by user", file=sys.stderr)
-#     except Exception as e:
-#         print(f"Server error: {e}", file=sys.stderr)
-#         sys.exit(1)
-
-
-def main():
-    mcp.run(transport='stdio')
-
-
-    # """Main entry point for the CLI"""
-    # if len(sys.argv) > 1:
-    #     if sys.argv[1] in ["--help", "-h"]:
-    #         print("Freesound MCP Server - Phase 1")
-    #         print("Usage: freesound-mcp")
-    #         print()
-    #         print("Environment variables required:")
-    #         print("  FREESOUND_API_KEY - Get from https://freesound.org/apiv2/apply/")
-    #         print()
-    #         print("Connect to Claude Desktop by adding this server to your MCP configuration.")
-    #         return
-    #     elif sys.argv[1] in ["--version", "-v"]:
-    #         print("freesound-mcp 0.1.0")
-    #         return
-    
-    # # Validate environment before starting
-    # if not FREESOUND_API_KEY or FREESOUND_API_KEY == "your_freesound_api_key_here":
-    #     print("Error: Please set your FREESOUND_API_KEY in the .env file", file=sys.stderr)
-    #     print("Get your API key from: https://freesound.org/apiv2/apply/", file=sys.stderr)
-    #     sys.exit(1)
-    
-    # print("Starting Freesound MCP Server...", file=sys.stderr)
-    # print("Ready to search for audio files!", file=sys.stderr)
-    
-    # # Run the server
-    # asyncio.run(run_server())
-
-
 if __name__ == "__main__":
     mcp.run(transport='stdio')
